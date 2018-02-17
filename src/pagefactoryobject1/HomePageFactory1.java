@@ -25,6 +25,26 @@ public class HomePageFactory1 {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
+	
+	public void typeEmail(String email){
+		email_address.sendKeys(email);
 	}
+	
+	public void typePassword(String p_word){
+		pword.sendKeys(p_word);
+	}
+	
+	public void clickSignIn(){
+		sign_in.click();
+	}
+	
+	public void completeLogin(String email, String pword){
+		typeEmail(email);
+		typePassword(pword);
+		clickSignIn();
+	}
+
+}
+	
 	
 	
